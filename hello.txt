@@ -1,0 +1,3 @@
+Hi there!
+I'm Pesiko the bot. 
+Say /pic and I'll send you a picture of what I'm currently seeing.

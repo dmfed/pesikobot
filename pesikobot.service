@@ -1,0 +1,11 @@
+[Unit]
+Description=Pesiko the Bot
+Wants=network-online.service
+After=network-online.service NetworkManager-wait-online.service
+
+[Service]
+ExecStart=/usr/local/bin/pesikobot
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

@@ -1,3 +1,6 @@
 Hi there!
 I'm Pesiko the bot. 
-Say /pic and I'll send you a picture of what I'm currently seeing.
+/cmd        to launch single command as current user 
+/whoami     returns yor Telegram username and id
+/pic        to see what I'm currently seeing
+/help       prints this message again

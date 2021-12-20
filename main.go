@@ -22,7 +22,6 @@ func main() {
 		return
 	}
 	token := cfg.Get("token").String()
-
 	settings := telebot.Settings{Token: token,
 		Poller: &telebot.LongPoller{Timeout: 10 * time.Second}}
 
@@ -31,7 +30,10 @@ func main() {
 		log.Println(err)
 		return
 	}
-	pesik := pesikobot{bot}
+	id, _ := cfg.Get("ownerid").Int()
+	idstr := cfg.Get("ownerid").String()
+	username := cfg.Get("ownerusername").String()
+	pesik := pesikobot{bot, botOwner{id, idstr, username}}
 	pesik.Handle(telebot.OnText, pesik.all)
 	// Let's handle system signals
 	interrupts := make(chan os.Signal, 1)
